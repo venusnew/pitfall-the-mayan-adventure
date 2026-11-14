@@ -1,30 +1,63 @@
-﻿﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EmulatorJS - Pitfall - The Mayan Adventure</title>
-  <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-       
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pitfall: The Mayan Adventure</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+</style>
 </head>
+
 <body>
-  <div id="game"></div>
 
-  <script>
-    var EJS_player = "#game";
-    var EJS_core = "nes"; // Consola: NES, SNES, GBA, N64, etc.
-    var EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-    var EJS_gameUrl = "Pitfall - The Mayan Adventure (U).zip"; // Archivo del juego
-  </script>
+<div id="game"></div>
 
-  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+<script>
+/* CONFIGURACIÓN DEL JUEGO */
+
+var EJS_player = "#game";
+
+/* CAMBIAR POR LA CONSOLA */
+var EJS_core = "nes";
+
+/* ARCHIVOS DEL EMULADOR */
+var EJS_pathtodata =
+"https://cdn.emulatorjs.org/stable/data/";
+
+/* DIRECCIÓN DE LA ROM EN GITHUB */
+var EJS_gameUrl =
+"https://venusnew.github.io/games/Pitfall%20-%20The%20Mayan%20Adventure%20(U).zip";
+
+/* NOMBRE DEL JUEGO */
+var EJS_gameName = "Pitfall: The Mayan Adventure";
+
+/* CONTROLES */
+var EJS_startOnLoaded = true;
+
+</script>
+
+<script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
 </body>
 </html>
